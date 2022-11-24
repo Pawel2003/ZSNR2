@@ -172,6 +172,7 @@ p
     width: calc(100% / 5);
     display: flex;
     justify-content: center;
+    border: 2px solid transparent;
 }
 ul
 {
@@ -505,6 +506,10 @@ label[for="map-pin"]
     transform: translateY(-25px);
     font-size: 18px;
 }
+#kontakt
+{
+    border: 2px solid #1b1b1b;
+}
 #adres, #tel
 {
     margin-bottom: 15px;
@@ -615,7 +620,7 @@ label[for="map-pin"]
 {
     font-size: 2em;
     padding: 0 20px;
-    line-height: 3vh;
+    line-height: 4vh;
 }
 .podstronap
 {
