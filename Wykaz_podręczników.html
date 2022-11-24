@@ -34,7 +34,7 @@
         </div>
         <nav id="nav">
             <div class="navi">
-                <a href="index.html" class="alink" onmouseover="hover(1) " onmouseout="hover(0)">Główna</a>
+                <a href="Index.html" class="alink" onmouseover="hover(1) " onmouseout="hover(0)">Strona główna</a>
             </div>
             <div class="navi">
                 <ul>
@@ -80,7 +80,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="navi">
+            <div class="navi" id="bazawiedzy">
                 <ul>
                     <li>
                         <p class="ulli">Baza wiedzy</p>
@@ -102,7 +102,7 @@
             <div class="pobierz"> <a href="https://zsnr2pl.SZKOLNY ZESTAW PODRĘCZNIpl/wp-content/uploads/2022/06/SZKOLNY-ZESTAW-PODRĘCZNIKÓW-PO-GIMNAZJUM.docx" class="a" download="">Pobierz</a></div>
             <div class="podstronap"><p>SZKOLNY ZESTAW PODRĘCZNIKÓW DLA ABSOLWENTÓW SZKOŁY PODSTAWOWEJ 2022-2023 KLASY I</p></div>
             <div class="pobierz"> <a href="https://zsnr2pl.pl/wp-content/uploads/2022/07/SZKOLNY-ZESTAW-PODRĘCZNIKÓW-KL-I-ROK-SZKOLNY-2022-2023-DLA-ABSOLWENTÓW-SZKOŁY-PODSTAWOWEJ-1.pdf" class="a" download="">Pobierz</a></div>
-            <div class="podstronap"><p>SZKOLNY ZESTAW PODRĘCZNIKÓW DLA ABSOLWENTÓW SZKOŁY PODSTAWOWEJ 2022-2023 KLASY II</p></div>
+            <div class="podstronap"><p>SZKOLNY-ZESTAW-PODRĘCZNIKÓW-DLA-ABSOLWENTÓW-SZKOŁY-PODSTAWOWEJ-ROK-SZKOLNY 2022-2023 KLASY II</p></div>
             <div class="pobierz"> <a href="https://zsnr2pl.pl/wp-content/uploads/2022/07/SZKOLNY-ZESTAW-PODRĘCZNIKÓW-KL-II-DLA-ABSOLWENTÓW-SZKOŁY-PODSTAWOWEJ-ROK-SZKOLNY-2022-2023.pdf"class="a" download="">Pobierz</a></div>
             <div class="podstronap"><p>SZKOLNY ZESTAW PODRĘCZNIKÓW DLA ABSOLWENTÓW SZKOŁY PODSTAWOWEJ 2022-2023 KLASY III</p></div>
             <div class="pobierz"> <a href="https://zsnr2pl.pl/wp-content/uploads/2022/06/SZKOLN-ZESTAW-PODRĘCZNIKÓW-KL-III-DLA-ABSOLWENTÓW-SZKOŁY-PODSTAWOWEJ-ROK-SZKOLNY-2022-2023.docx"class="a" download="">Pobierz</a></div>
@@ -166,11 +166,11 @@
         <div id="down">
             <div id="divulfoot">
                 <ul id="ulfoot">
-                    <li class="lifoot"><a class="foota">Strona główna</a></li>
-                    <li class="lifoot"><a class="foota">Aktualności i wydarzenia</a></li>
-                    <li class="lifoot"><a class="foota">Galeria</a></li>
-                    <li class="lifoot"><a class="foota">Baza wiedzy</a></li>
-                    <li class="lifoot"><a class="foota">Kontakt</a></li>
+                    <li class="lifoot"><a class="foota" href="index.html">Strona główna</a></li>
+                    <li class="lifoot"><a class="foota" href="index.html">Aktualności i wydarzenia</a></li>
+                    <li class="lifoot"><a class="foota" href="galeria.html">Galeria</a></li>
+                    <li class="lifoot"><a class="foota" onclick="Bazawiedzy()" href="#nav">Baza wiedzy</a></li>
+                    <li class="lifoot"><a class="foota" onclick="podswietlenie()" href="#kontakt">Kontakt</a></li>
                 </ul>
             </div>
             <div id="copyright">
@@ -184,6 +184,8 @@
         document.getElementById('rutkiul').style.flexDirection = "column";
         var rutkidiv = document.getElementsByClassName('rutkidiv');
         var alink = document.getElementsByClassName('alink');
+        var kontakt = document.getElementById('kontakt').style;
+        var bazawiedzy = document.getElementById('bazawiedzy').style;
         for (var o = 0; o < rutkidiv.length; o++) {
             rutkidiv[o].style.fontSize = "110px";
         }
@@ -209,6 +211,10 @@
                 body.color = "#fff";
                 div2.backgroundColor = "#000";
                 div1.backgroundColor = "#000";
+                kontakt.backgroundColor = "#1b1b1b";
+                kontakt.border = "2px solid #1b1b1b";
+                bazawiedzy.backgroundColor = "#1b1b1b";
+                bazawiedzy.border = "2px solid #1b1b1b";
                 suwak.backgroundColor = "#252525";
                 idi.color = "#fff";
                 nav.backgroundColor = "#1b1b1b";
@@ -229,6 +235,10 @@
                 podstronaright.backgroundColor = "#eee";
                 body.backgroundColor = "#fff";
                 body.color = "#000";
+                kontakt.backgroundColor = "#eee";
+                kontakt.border = "2px solid #eee";
+                bazawiedzy.backgroundColor = "#eee";
+                bazawiedzy.border = "2px solid #eee";
                 div2.backgroundColor = "#252525";
                 div1.backgroundColor = "#252525";
                 suwak.backgroundColor = "#fff";
@@ -276,7 +286,72 @@
 
             }
         }
+        function podswietlenie()
+        {
+            if (i==1)
+            {            
+                kontakt.backgroundColor = "#252525";
+                kontakt.border ="2px solid rgb(22, 206, 238)";
+                kontakt.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(odswietlenie, 500);
+            }
+            else
+            {
+                kontakt.backgroundColor = "#eee";
+                kontakt.border ="2px solid rgb(22, 206, 238)";
+                kontakt.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(odswietlenie, 500);
+            } 
+            
+        }
+        function odswietlenie()
+        {
+            if (i==1)
+            {
+                kontakt.backgroundColor = "#1b1b1b";
+                kontakt.border = "2px solid #1b1b1b";
+                kontakt.boxShadow = "none";
+            }
+            else
+            {
+                kontakt.backgroundColor = "#eee";
+                kontakt.border = "2px solid #eee";
+                kontakt.boxShadow = "none";
+            }
+        }
+        function Bazawiedzy()
+        {
+            if (i==1)
+            {
+                bazawiedzy.backgroundColor = "#252525";
+                bazawiedzy.border = "2px solid rgb(22, 206, 238)";
+                bazawiedzy.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(Bazawiedzyod, 500);
+            }
+            else
+            {
+                bazawiedzy.backgroundColor = "#eee";
+                bazawiedzy.border = "2px solid rgb(22, 206, 238)";
+                bazawiedzy.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(Bazawiedzyod, 500);
+            }
 
+        }
+        function Bazawiedzyod()
+        {
+            if (i==1)
+            {
+                bazawiedzy.backgroundColor = "#1b1b1b";
+                bazawiedzy.border = "2px solid #1b1b1b";
+                bazawiedzy.boxShadow = "none";
+            }
+            else
+            {
+                bazawiedzy.backgroundColor = "#eee";
+                bazawiedzy.border = "2px solid #eee";
+                bazawiedzy.boxShadow = "none";
+            }
+        }
     </script>
 </body>
 
