@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Zespół szkół im. Leona Rutkowskiego w Płońsku">
-    <meta name="keywords" content="ZSNR2, zsnr2, rutki, Rutki, Płońsk, zsnr2rutki, Zsnr2płońsk">
+    <meta name="keywords" content="ZSNR2, zsnr2, rutki, Płońsk, zsnr2rutki, Zsnr2płońsk">
     <meta name="author" content="Paweł Frątczak">
     <link rel="stylesheet" href="ZSNR2_styl.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -37,7 +37,7 @@
         </div>
         <nav id="nav">
             <div class="navi">
-                <a href="index.html" class="alink" onmouseover="hover(1) " onmouseout="hover(0)">Główna</a>
+                <a href="Index.html" class="alink" onmouseover="hover(1) " onmouseout="hover(0)">Strona główna</a>
             </div>
             <div class="navi">
                 <ul>
@@ -83,7 +83,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="navi">
+            <div class="navi" id="bazawiedzy">
                 <ul>
                     <li>
                         <p class="ulli">Baza wiedzy</p>
@@ -425,11 +425,11 @@
         <div id="down">
             <div id="divulfoot">
                 <ul id="ulfoot">
-                    <li class="lifoot"><a class="foota">Strona główna</a></li>
-                    <li class="lifoot"><a class="foota">Aktualności i wydarzenia</a></li>
-                    <li class="lifoot"><a class="foota">Galeria</a></li>
-                    <li class="lifoot"><a class="foota">Baza wiedzy</a></li>
-                    <li class="lifoot"><a class="foota">Kontakt</a></li>
+                    <li class="lifoot"><a class="foota" href="index.html">Strona główna</a></li>
+                    <li class="lifoot"><a class="foota" href="#panell">Aktualności i wydarzenia</a></li>
+                    <li class="lifoot"><a class="foota" href="galeria.html">Galeria</a></li>
+                    <li class="lifoot"><a class="foota" onclick="Bazawiedzy()" href="#nav">Baza wiedzy</a></li>
+                    <li class="lifoot"><a class="foota" onclick="podswietlenie()" href="#kontakt">Kontakt</a></li>
                 </ul>
             </div>
             <div id="copyright">
@@ -446,6 +446,8 @@
         var zmien = document.getElementById('showmore');
         var mediadata = document.getElementsByClassName('mediadata');
         var alink = document.getElementsByClassName('alink');
+        var kontakt = document.getElementById('kontakt').style;
+        var bazawiedzy = document.getElementById('bazawiedzy').style;
         if (news.length > 5) {
             for (var t = 6; t <= news.length; t++)
                 news[t - 1].style.display = "none";
@@ -486,7 +488,6 @@
             var div1 = document.getElementById('div1').style;
             var div2 = document.getElementById('div2').style;
             var suwak = document.getElementById('suwak').style;
-            
             var li = document.getElementsByClassName('li');
             var idi = document.getElementById('i').style;
             var nav = document.getElementById('nav').style;
@@ -501,6 +502,10 @@
                 div2.backgroundColor = "#000";
                 div1.backgroundColor = "#000";
                 suwak.backgroundColor = "#252525";
+                kontakt.backgroundColor = "#1b1b1b";
+                kontakt.border = "2px solid #1b1b1b";
+                bazawiedzy.backgroundColor = "#1b1b1b";
+                bazawiedzy.border = "2px solid #1b1b1b";
                 idi.color = "#fff";
                 nav.backgroundColor = "#1b1b1b";
                 linki.backgroundColor = "#1b1b1b";
@@ -527,7 +532,10 @@
                 div2.backgroundColor = "#252525";
                 div1.backgroundColor = "#252525";
                 suwak.backgroundColor = "#fff";
-                
+                kontakt.backgroundColor = "#eee";
+                kontakt.border = "2px solid #eee";
+                bazawiedzy.backgroundColor = "#eee";
+                bazawiedzy.border = "2px solid #eee";
                 idi.color = "#fff";
                 nav.backgroundColor = "#eee";
                 linki.backgroundColor = "#eee";
@@ -561,7 +569,8 @@
                 mediadata[1].style.color = "rgb(22, 206, 238)";
             }
             else if (y == 0) {
-                switch (y, i) {
+                switch (y, i) 
+                {
                     case 0, 1:
                         alink[0].style.color = "#fff";
                         mediadata[0].style.color = "#fff";
@@ -578,7 +587,72 @@
 
             }
         }
+        function podswietlenie()
+        {
+            if (i==1)
+            {            
+                kontakt.backgroundColor = "#252525";
+                kontakt.border ="2px solid rgb(22, 206, 238)";
+                kontakt.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(odswietlenie, 500);
+            }
+            else
+            {
+                kontakt.backgroundColor = "#eee";
+                kontakt.border ="2px solid rgb(22, 206, 238)";
+                kontakt.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(odswietlenie, 500);
+            } 
+            
+        }
+        function odswietlenie()
+        {
+            if (i==1)
+            {
+                kontakt.backgroundColor = "#1b1b1b";
+                kontakt.border = "2px solid #1b1b1b";
+                kontakt.boxShadow = "none";
+            }
+            else
+            {
+                kontakt.backgroundColor = "#eee";
+                kontakt.border = "2px solid #eee";
+                kontakt.boxShadow = "none";
+            }
+        }
+        function Bazawiedzy()
+        {
+            if (i==1)
+            {
+                bazawiedzy.backgroundColor = "#252525";
+                bazawiedzy.border = "2px solid rgb(22, 206, 238)";
+                bazawiedzy.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(Bazawiedzyod, 500);
+            }
+            else
+            {
+                bazawiedzy.backgroundColor = "#eee";
+                bazawiedzy.border = "2px solid rgb(22, 206, 238)";
+                bazawiedzy.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
+                setTimeout(Bazawiedzyod, 500);
+            }
 
+        }
+        function Bazawiedzyod()
+        {
+            if (i==1)
+            {
+                bazawiedzy.backgroundColor = "#1b1b1b";
+                bazawiedzy.border = "2px solid #1b1b1b";
+                bazawiedzy.boxShadow = "none";
+            }
+            else
+            {
+                bazawiedzy.backgroundColor = "#eee";
+                bazawiedzy.border = "2px solid #eee";
+                bazawiedzy.boxShadow = "none";
+            }
+        }
     </script>
 </body>
 
