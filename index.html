@@ -63,11 +63,11 @@
                 }
             }
             let tryb = getCookie("tryb");
-            if (tryb == 1)
+            if (tryb == "jeden")
             {
                 on(1);
             }
-            else if (tryb == 2)
+            else if (tryb == "dwa")
             {
                 on(2);
             }
@@ -96,9 +96,9 @@
                         <input type="radio" id="radio2" name="radio" value="radio2">
                     </div>
                     <div id="div2">
-                        <input type="radio" name="radio2" id="radio3" onclick="on(1)" checked><label for="radio3"
+                        <input type="radio" name="radio2" id="radio3" onclick="on("jeden")" checked><label for="radio3"
                             id="i"><i data-feather="moon"></i></label>
-                        <input type="radio" name="radio2" id="radio4" onclick="on(2)"><label for="radio4"><i
+                        <input type="radio" name="radio2" id="radio4" onclick="on("dwa")"><label for="radio4"><i
                                 data-feather="sun"></i></label>
                         <span id="suwak"></span>
                     </div>
@@ -553,7 +553,7 @@
     </footer>
     <script>
         feather.replace()
-        var i = 1;
+        var i = "jeden";
         const news = document.getElementsByClassName('news');
         var zmien = document.getElementById('showmore');
         var mediadata = document.getElementsByClassName('mediadata');
@@ -608,7 +608,7 @@
             var footup = document.getElementById('up').style;
             var chevron = document.getElementById('chevron-up').style;
             if (x == 1) {
-                i = 1;
+                i = "jeden";
                 body.backgroundColor = "#252525";
                 body.color = "#fff";
                 div2.backgroundColor = "#000";
@@ -638,7 +638,7 @@
                 }
             }
             else if (x == 2) {
-                i = 2;
+                i = "dwa";
                 body.backgroundColor = "#fff";
                 body.color = "#000";
                 div2.backgroundColor = "#252525";
@@ -682,12 +682,12 @@
             }
             else if (y == 0) {
                 switch (y, i) {
-                    case 0, 1:
+                    case 0, "jeden":
                         alink[0].style.color = "#fff";
                         mediadata[0].style.color = "#fff";
                         mediadata[1].style.color = "#fff";
                         break;
-                    case 0, 2:
+                    case 0, "dwa":
                         alink[0].style.color = "#000";
                         mediadata[0].style.color = "#000";
                         mediadata[1].style.color = "#000";
@@ -699,7 +699,7 @@
             }
         }
         function podswietlenie() {
-            if (i == 1) {
+            if (i == "jeden") {
                 kontakt.backgroundColor = "#252525";
                 kontakt.border = "2px solid rgb(22, 206, 238)";
                 kontakt.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
@@ -714,7 +714,7 @@
 
         }
         function odswietlenie() {
-            if (i == 1) {
+            if (i == "jeden") {
                 kontakt.backgroundColor = "#1b1b1b";
                 kontakt.border = "2px solid #1b1b1b";
                 kontakt.boxShadow = "none";
@@ -726,7 +726,7 @@
             }
         }
         function Bazawiedzy() {
-            if (i == 1) {
+            if (i == "jeden") {
                 bazawiedzy.backgroundColor = "#252525";
                 bazawiedzy.border = "2px solid rgb(22, 206, 238)";
                 bazawiedzy.boxShadow = "0 0 10px rgb(22, 206, 238) inset";
@@ -741,7 +741,7 @@
 
         }
         function Bazawiedzyod() {
-            if (i == 1) {
+            if (i == "jeden") {
                 bazawiedzy.backgroundColor = "#1b1b1b";
                 bazawiedzy.border = "2px solid #1b1b1b";
                 bazawiedzy.boxShadow = "none";
