@@ -48,6 +48,22 @@
             } else {
 
             }
+            let tryb = getCookie("tryb");
+            if (tryb == 1)
+            {
+                on(1);
+            }
+            else if (tryb == 2)
+            {
+                on(2);
+            }
+            else
+            {
+                tryb = i;
+                if (tryb != "" && tryb != null) {
+                    setCookie("tryb", tryb, 30);
+                }
+            }
         }
     </script>
 </head>
