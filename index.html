@@ -39,7 +39,7 @@
             var ol2 = document.getElementById('ol2').style;
             var ol3 = document.getElementById('ol3').style;
             var ol4 = document.getElementById('ol4').style;
-            let user = getCookie("username");
+            let user = getCookie("urzadzenie");
             if (user == "telefon") {
                 ol1.transform = "translateX(-125px)";
                 ol2.transform = "translateX(-120px)";
@@ -59,7 +59,7 @@
             else {
                 user = prompt("Jakiego urządzenia używasz ? (telefon, komputer, inne):", "");
                 if (user != "" && user != null) {
-                    setCookie("username", user, 30);
+                    setCookie("urzadzenie", user, 30);
                 }
             }
         }
