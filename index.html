@@ -70,8 +70,7 @@
             var ol2 = document.getElementById('ol2').style;
             var ol3 = document.getElementById('ol3').style;
             var ol4 = document.getElementById('ol4').style;
-            var radio3 = document.getElementById('radio3');
-            var radio4 = document.getElementById('radio4');
+            var suwak = document.getElementById('suwak').style;
             let user = getCookie("urzadzenie");
             let tryb = getCookie("trybekran");
             alert(tryb);
@@ -100,13 +99,13 @@
             if (tryb == 1)
             {
                 on(1);
-                radio3.checked;
+                suwak.transform = "ranslateX(-50%)"
                 alert("tryb ustawiony na ciemny");
             }
             else if (tryb == 2)
             {
                 on(2);
-                radio4.checked;
+                suwak.transform = "ranslateX(50%)"
                 alert("tryb ustawiony na jasny");
             }
             else
