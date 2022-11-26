@@ -24,27 +24,21 @@
                 if (tryb == 1)
                 {
                     document.cookie = tryb + "=" + (tryb + 1) + ";" + expiresusun + ";path=/";
-                    alert("cookie trybekran 1 usunięto");
                     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-                    alert("i cookie trybekran "+cvalue+" ustawiono");
                 }
                 else if (tryb == 2)
                 {
                     document.cookie = tryb + "=" + (tryb - 1) + ";" + expiresusun + ";path=/";
-                    alert("cookie trybekran 2 usunięto");
                     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-                    alert("i cookie trybekran "+cvalue+" ustawiono");
                 }
                 else
                 {
                     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-                    alert("cookie trybekran "+cvalue+" ustawiono");
                 }
             }
             else
             {
                 document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-                alert("cookie trybekran "+cvalue+" ustawiono");
             }
             
         }
@@ -73,7 +67,6 @@
             var suwak = document.getElementById('suwak').style;
             let user = getCookie("urzadzenie");
             let tryb = getCookie("trybekran");
-            alert(tryb);
             if (user == "telefon") {
                 ol1.transform = "translateX(-135px)";
                 ol2.transform = "translateX(-135px)";
@@ -99,14 +92,12 @@
             if (tryb == 1)
             {
                 on(1);
-                suwak.transform = "ranslateX(-50%)"
-                alert("tryb ustawiony na ciemny");
+                suwak.transform = "translateX(-50%)";
             }
             else if (tryb == 2)
             {
                 on(2);
-                suwak.transform = "ranslateX(50%)"
-                alert("tryb ustawiony na jasny");
+                suwak.transform = "translateX(50%)";
             }
             else
             {
