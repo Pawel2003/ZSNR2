@@ -633,6 +633,7 @@
         }
 
         function on(x) {
+            var suwak = document.getElementById('suwak').style;
             var body = document.getElementById('body').style;
             var div1 = document.getElementById('div1').style;
             var div2 = document.getElementById('div2').style;
@@ -646,6 +647,7 @@
             var chevron = document.getElementById('chevron-up').style;
             if (x == 1) {
                 i = 1;
+                suwak.transform = "translateX(-50%)";
                 body.backgroundColor = "#252525";
                 body.color = "#fff";
                 div2.backgroundColor = "#000";
@@ -676,6 +678,7 @@
             }
             else if (x == 2) {
                 i = 2;
+                suwak.transform = "translateX(-50%)";
                 body.backgroundColor = "#fff";
                 body.color = "#000";
                 div2.backgroundColor = "#252525";
