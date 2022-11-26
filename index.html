@@ -25,11 +25,15 @@
                 {
                     document.cookie = tryb + "=" + (tryb + 1) + ";" + expiresusun + ";path=/";
                     alert("cookie trybekran 1 usunięto");
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                    alert("i cookie trybekran "+cvalue+" ustawiono");
                 }
                 else if (tryb == 2)
                 {
                     document.cookie = tryb + "=" + (tryb - 1) + ";" + expiresusun + ";path=/";
                     alert("cookie trybekran 2 usunięto");
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                    alert("i cookie trybekran "+cvalue+" ustawiono");
                 }
                 else
                 {
