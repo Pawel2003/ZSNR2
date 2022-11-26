@@ -40,6 +40,7 @@
             var ol3 = document.getElementById('ol3').style;
             var ol4 = document.getElementById('ol4').style;
             let user = getCookie("urzadzenie");
+            let tryb = getCookie("tryb");
             if (user == "telefon") {
                 ol1.transform = "translateX(-135px)";
                 ol2.transform = "translateX(-135px)";
@@ -62,6 +63,17 @@
                     setCookie("urzadzenie", user, 30);
                 }
             }
+            if (tryb == 1)
+            {
+                on(1);
+            }
+            else if (tryb == 2)
+            {
+                on(2);
+            }
+            else
+            {
+            }
         }
     </script>
 </head>
@@ -80,9 +92,9 @@
                         <input type="radio" id="radio2" name="radio" value="radio2">
                     </div>
                     <div id="div2">
-                        <input type="radio" name="radio2" id="radio3" onclick="on(1)"checked><label for="radio3"
+                        <input type="radio" name="radio2" id="radio3" onclick="on(1)" onclick="setCookie('tryb', 1, 30)"checked><label for="radio3"
                             id="i"><i data-feather="moon"></i></label>
-                        <input type="radio" name="radio2" id="radio4" onclick="on(2)"><label for="radio4"><i
+                        <input type="radio" name="radio2" id="radio4" onclick="on(2)" onclick="setCookie('tryb', 2, 30)"><label for="radio4"><i
                                 data-feather="sun"></i></label>
                         <span id="suwak"></span>
                     </div>
