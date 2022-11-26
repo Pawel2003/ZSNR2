@@ -122,9 +122,9 @@
                         <input type="radio" id="radio2" name="radio" value="radio2">
                     </div>
                     <div id="div2">
-                        <input type="radio" name="radio2" id="radio3" onclick="on(1)" onclick="setCookie('trybekran', 1, 30)" checked><label for="radio3"
+                        <input type="radio" name="radio2" id="radio3" onclick="ustaw(1)" checked><label for="radio3"
                             id="i"><i data-feather="moon"></i></label>
-                        <input type="radio" name="radio2" id="radio4" onclick="on(2)" onclick="setCookie('trybekran', 2, 30)"><label for="radio4"><i
+                        <input type="radio" name="radio2" id="radio4" onclick="ustaw(2)"><label for="radio4"><i
                                 data-feather="sun"></i></label>
                         <span id="suwak"></span>
                     </div>
@@ -592,6 +592,19 @@
         }
         else {
             alert("mało newsów");
+        }
+        function ustaw(x)
+        {
+            if (x == 1)
+            {
+                setCookie("trybekran", 1, 30);
+                on(1);
+            }
+            else 
+            {
+                setCookie("trybekran", 2, 30)
+                on(2);
+            }
         }
         function showmore() {
             zmien.innerHTML = "<button id='button' onclick='showless()'><i id='chevron-up' data-feather='chevron-up'></i></button>";
