@@ -23,16 +23,20 @@
             let tryb = getCookie("trybekran");
                 if (tryb == 1)
                 {
-                document.cookie = tryb + "=" + (tryb + 1) + ";" + expiresusun + ";path=/";
+                    document.cookie = tryb + "=" + (tryb + 1) + ";" + expiresusun + ";path=/";
                 }
                 else if (tryb == 2)
                 {
-                document.cookie = tryb + "=" + (tryb - 1) + ";" + expiresusun + ";path=/";
+                    document.cookie = tryb + "=" + (tryb - 1) + ";" + expiresusun + ";path=/";
                 }
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                else
+                {
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                }
             }
             else
             {
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
             }
             
         }
