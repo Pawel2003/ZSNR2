@@ -24,19 +24,23 @@
                 if (tryb == 1)
                 {
                     document.cookie = tryb + "=" + (tryb + 1) + ";" + expiresusun + ";path=/";
+                    alert("cookie trybekran 1 usunięto");
                 }
                 else if (tryb == 2)
                 {
                     document.cookie = tryb + "=" + (tryb - 1) + ";" + expiresusun + ";path=/";
+                    alert("cookie trybekran 2 usunięto");
                 }
                 else
                 {
                     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                    alert("cookie trybekran "+cvalue+" ustawiono");
                 }
             }
             else
             {
                 document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                alert("cookie trybekran "+cvalue+" ustawiono");
             }
             
         }
