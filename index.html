@@ -13,9 +13,28 @@
     <script>
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
+            const dusun = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            dusun.setTime(dusun.getTime() - (exdays * 24 * 60 * 60 * 1000));
             let expires = "expires=" + d.toUTCString();
+            let expiresusun = "expires=" + dusun.toUTCString();
+            if (cname == "trybekran")
+            {
+            let tryb = getCookie("trybekran");
+                if (tryb == 1)
+                {
+                document.cookie = tryb + "=" + (tryb + 1) + ";" + expiresusun + ";path=/";
+                }
+                else if (tryb == 2)
+                {
+                document.cookie = tryb + "=" + (tryb - 1) + ";" + expiresusun + ";path=/";
+                }
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+            else
+            {
+            }
+            
         }
 
         function getCookie(cname) {
@@ -40,7 +59,7 @@
             var ol3 = document.getElementById('ol3').style;
             var ol4 = document.getElementById('ol4').style;
             let user = getCookie("urzadzenie");
-            let tryb = getCookie("tryb");
+            let tryb = getCookie("trybekran");
             alert(tryb);
             if (user == "telefon") {
                 ol1.transform = "translateX(-135px)";
@@ -93,9 +112,9 @@
                         <input type="radio" id="radio2" name="radio" value="radio2">
                     </div>
                     <div id="div2">
-                        <input type="radio" name="radio2" id="radio3" onclick="on(1)" onclick="setCookie('tryb', 'jeden', 30)" checked><label for="radio3"
+                        <input type="radio" name="radio2" id="radio3" onclick="on(1)" onclick="setCookie('trybekran', 1, 30)" checked><label for="radio3"
                             id="i"><i data-feather="moon"></i></label>
-                        <input type="radio" name="radio2" id="radio4" onclick="on(2)" onclick="setCookie('tryb', 'dwa', 30)"><label for="radio4"><i
+                        <input type="radio" name="radio2" id="radio4" onclick="on(2)" onclick="setCookie('trybekran', 2, 30)"><label for="radio4"><i
                                 data-feather="sun"></i></label>
                         <span id="suwak"></span>
                     </div>
