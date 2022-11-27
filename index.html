@@ -667,6 +667,9 @@ Mamy nadzieję, że zobaczymy się na trasie.<br /><br />
         var newsoverflow = document.getElementsByClassName('newsoverflow');
         var divnewsczytajwiecej = document.getElementsByClassName('divnewsczytajwiecej');
         var newszawartosc = document.getElementsByClassName('newszawartosc');
+        var newsh2 = document.getElementByClassName('newsh2');
+        var newsdata = document.getElementByClassName('newsdata');
+        var newsp = document.getElementByClassName('newsp');
         if (news.length > 5) {
             for (var t = 6; t <= news.length; t++)
                 news[t - 1].style.display = "none";
@@ -879,9 +882,9 @@ Mamy nadzieję, że zobaczymy się na trasie.<br /><br />
         }
         function czytajwiecej(x)
         {
-            document.getElementByClassName('newsh2').style.fontSize = "25px";
-            document.getElementByClassName('newsdata').style.fontSize = "18px";
-            document.getElementByClassName('newsp').style.fontSize = "18px";
+            newsh2[x].style.fontSize = "25px";
+            newsdata[x].style.fontSize = "18px";
+            newsp[x].style.fontSize = "18px";
             newsoverflow[x].style.background = "transparent";
             newszawartosc[x].style.overflow = "unset";
             newszawartosc[x].style.height = "auto";
