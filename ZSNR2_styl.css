@@ -337,9 +337,9 @@ button:hover
 {
 	
     width: 80%;
-	word-wrap: break-word;
-	background-color: #666666;
-	height: auto;
+    word-wrap: break-word;
+    background-color: #666666;
+    height: auto;
     text-transform: uppercase;
     font-size: 14px;
     padding: 5px 20px 5px 20px;
@@ -386,7 +386,7 @@ button:hover
 {
     float: left;
     height: auto;
-    width: calc(50% - 20px) !important;
+    width: calc(50% - 10px) !important;
     margin: 10px 10px 0 0;
     pointer-events: none;
 }
@@ -402,7 +402,7 @@ button:hover
 {
     float: left;
     height: auto;
-    width: calc(30% - 30px);
+    width: calc(33% - 10px);
     margin: 10px 10px 0 0;
     pointer-events: none;
 }
