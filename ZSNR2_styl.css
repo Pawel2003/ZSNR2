@@ -373,16 +373,21 @@ button:hover
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 180px;
+    height: 185px;
 }
 .newsoverflow
 {
     position: absolute;
     width: 100%;
-    height: 180px;
+    height: 190px;
     background: linear-gradient(180deg, transparent, #1b1b1b);
 }
-
+.newsheader
+{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
 .newszawartosc img
 {
     float: left;
@@ -407,11 +412,22 @@ button:hover
 }
 .newsp
 {
-    font-size: 18px !important;
+    font-size: 22px !important;
     line-height: 25px;
     display: flex !important;
     margin-bottom: 10px;
     pointer-events: none;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.newsp a
+{
+    display: flex;
+    font-size: 22px;
+    color: rgb(22, 206, 238);
+    height: auto;
+    text-transform: none;
+    text-decoration: underline;
 }
 .divnewsczytajwiecej
 {
