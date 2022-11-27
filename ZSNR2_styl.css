@@ -386,7 +386,7 @@ button:hover
 {
     float: left;
     height: auto;
-    width: calc(50% - 20px);
+    width: calc(50% - 20px) !important;
     margin: 10px 10px 0 0;
     pointer-events: none;
 }
@@ -394,7 +394,7 @@ button:hover
 {
     float: left;
     height: auto;
-    width: calc(100% - 10px);
+    width: calc(100% - 10px) !important;
     margin: 10px 10px 0 0;
     pointer-events: none;
 }
