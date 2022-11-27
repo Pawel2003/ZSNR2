@@ -85,9 +85,12 @@
             }
             else {
                 user = prompt("Jakiego urządzenia używasz ? (telefon, komputer, inne):", "");
-                if (user != "" && user != null) {
-                    setCookie("urzadzenie", user, 30);
+                while ((user != "telefon") && (user != "komputer") && (user != "inne"))
+                {
+                    user = prompt("Podaj prawidłowe dane: (telefon, komputer, inne):", "");
                 }
+                setCookie("urzadzenie", user, 30);
+                location.reload();
             }
             if (tryb == 1)
             {
