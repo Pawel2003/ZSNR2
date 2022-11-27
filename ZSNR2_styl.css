@@ -382,27 +382,12 @@ button:hover
     height: 180px;
     background: linear-gradient(180deg, transparent, #1b1b1b);
 }
-.imgnapolowe
-{
-    float: left;
-    height: auto;
-    width: calc(50% - 20px) !important;
-    margin: 10px 10px 0 0;
-    pointer-events: none;
-}
-.imgnacale
-{
-    float: left;
-    height: auto;
-    width: calc(100% - 20px) !important;
-    margin: 10px 10px 0 0;
-    pointer-events: none;
-}
+
 .newszawartosc img
 {
     float: left;
     height: auto;
-    width: calc(33% - 20px);
+    width: calc(30% - 10px);
     margin: 10px 10px 0 0;
     pointer-events: none;
 }
@@ -455,12 +440,27 @@ button:hover
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .photos img
 {
     float: left;
     width: calc(33% - 10px);
     height: auto;
+    margin: 5px;
+}
+.imgnapolowe
+{
+    float: left;
+    height: auto;
+    width: calc(50% - 10px) !important;
+    margin: 5px;
+}
+.imgnacale
+{
+    float: left;
+    height: auto;
+    width: calc(100% - 10px) !important;
     margin: 5px;
 }
 #chevron-up
