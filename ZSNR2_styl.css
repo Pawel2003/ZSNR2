@@ -440,12 +440,13 @@ button:hover
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 15px;
     justify-content: center;
 }
 .photos img
 {
     float: left;
-    width: calc(33% - 10px);
+    width: calc(33.33% - 10px);
     height: auto;
     margin: 5px;
 }
