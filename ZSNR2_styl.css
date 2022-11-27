@@ -362,76 +362,92 @@ button:hover
     border-bottom: 2px solid rgb(22, 206, 238);
     margin: auto;
     margin-bottom: 30px;
-    padding: 20px 10px 30px 10px;
+    padding: 20px 10px 30px 20px;
     display: flex;
     justify-content: center;
     background-color: #1b1b1b;
+    flex-direction: column;
 }
-.news:hover
+.newszawartosc
 {
-    width: 95%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 180px;
+}
+.newsoverflow
+{
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(180deg, transparent, #1b1b1b);
+}
+.newszawartosc img
+{
+    float: left;
     height: auto;
+    width: calc(30% - 30px);
+    margin: 10px 10px 0 0;
 }
-.newsphoto
+.newszawartosc h2
 {
-    height: auto;
-    width: calc(30% - 10px);
-    padding: 0px 10px 10px 10px;
+    margin: 10px 0 0 0;
+    font-weight: bold;
 }
-figure
+.newsdata
 {
-    margin: auto;
+    margin: 0 0 15px 0;
+}
+.newsp
+{
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    margin-bottom: 10px;
+}
+.divnewsczytajwiecej
+{
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-a img
+.newsczytajwiecej
 {
-    height: 100%;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0 0 0;
+    text-align: center;
+    align-items: center;
+    color: #666666;
+    border-bottom: 2px solid #666666;
+    width: 180px;
+}
+.newsczytajwiecej:hover
+{
+    font-size: 21px;
+    width: 200px;
+    cursor: pointer;
+    transform: translateY(2px);
+}
+.photos
+{
     width: 100%;
-}
-.newsinfo
-{
     height: auto;
-    width: calc(70% - 10px);
-    padding: 0px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.newsh2 h2
+.photos img
 {
-    margin-top: -5px;
-    margin-bottom: 5px;
-}
-.newsdate
-{
-    margin-bottom: 20px;
-}
-.newstext
-{
+    float: left;
+    width: calc(33% - 10px);
     height: auto;
-}
-.newstext p
-{
-    line-height: 30px;
-    font-size: 18px;
-    letter-spacing: 0.7px;
-    margin-bottom: 20px;
+    margin: 5px;
 }
 #chevron-up
 {
     height: 35px;
     width: 35px;
-}
-.newsreadmore
-{
-    margin: 0;
-    background-color: #666666;
-    padding: 10px 10px 10px 10px;
-    font-size: 10px;
-}
-.newsreadmore:hover
-{
-    background-color: #979797;
-    font-size: 13px;
-    margin: 0px 0px 0px -10px;
 }
 /*Tu są newsy*/
 
