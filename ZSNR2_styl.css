@@ -396,18 +396,20 @@ button:hover
     margin: 10px 0 0 0;
     font-weight: bold;
     font-size:25px;
+    display: block !important;
 }
 .newsdata
 {
     margin: 0 0 15px 0;
     pointer-events: none;
     font-size: 18px !important;
+    display: block !important;
 }
 .newsp
 {
     font-size: 18px !important;
     line-height: 25px;
-    display: block;
+    display: block !important;
     margin-bottom: 10px;
     pointer-events: none;
 }
