@@ -880,6 +880,11 @@ Mamy nadzieję, że zobaczymy się na trasie.<br /><br />
         function czytajwiecej(x)
         {
             newsoverflow[x].style.background = "transparent";
+            newsoverflow[x].style.height = "0";
+            newsoverflow[x].style.width = "0";
+            newsoverflow[x].style.zIndex = "-999";
+            newsoverflow[x].style.position = "relative";
+            newszawartosc[x].style.position = "absolute";
             newszawartosc[x].style.overflow = "unset";
             newszawartosc[x].style.height = "auto";
             var newsczytajwiecej = "newsczytajwiecej";
@@ -896,6 +901,11 @@ Mamy nadzieję, że zobaczymy się na trasie.<br /><br />
             {
                 newsoverflow[x].style.background = "linear-gradient(180deg, transparent, #eee)";
             }
+            newsoverflow[x].style.height = "180px";
+            newsoverflow[x].style.width = "100%";
+            newsoverflow[x].style.zIndex = "3";
+            newsoverflow[x].style.position = "absolute";
+            newszawartosc[x].style.position = "relative";
             newszawartosc[x].style.overflow = "hidden";
             newszawartosc[x].style.height = "180px";
             var newsczytajwiecej = "newsczytajwiecej";
