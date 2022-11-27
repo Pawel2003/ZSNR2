@@ -382,14 +382,6 @@ button:hover
     height: 180px;
     background: linear-gradient(180deg, transparent, #1b1b1b);
 }
-.newszawartosc img
-{
-    float: left;
-    height: auto;
-    width: calc(30% - 30px);
-    margin: 10px 10px 0 0;
-    pointer-events: none;
-}
 .imgnapolowe
 {
     float: left;
@@ -403,6 +395,14 @@ button:hover
     float: left;
     height: auto;
     width: calc(100% - 10px);
+    margin: 10px 10px 0 0;
+    pointer-events: none;
+}
+.newszawartosc img
+{
+    float: left;
+    height: auto;
+    width: calc(30% - 30px);
     margin: 10px 10px 0 0;
     pointer-events: none;
 }
