@@ -401,11 +401,11 @@ button:hover
 {
     margin: 0 0 15px 0;
     pointer-events: none;
-    font-size: 18px;
+    font-size: 18px !important;
 }
 .newsp
 {
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 25px;
     display: block;
     margin-bottom: 10px;
