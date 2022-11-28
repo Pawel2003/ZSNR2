@@ -393,7 +393,7 @@ button:hover
     float: left;
     height: auto;
     width: calc(30% - 10px);
-    margin: 10px 10px 0 0;
+    margin: 10px 10px 10px 0;
     pointer-events: none;
 }
 .newszawartosc h2
