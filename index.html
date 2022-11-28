@@ -60,38 +60,8 @@
         }
 
         function checkCookie() {
-            var ol1 = document.getElementById('ol1').style;
-            var ol2 = document.getElementById('ol2').style;
-            var ol3 = document.getElementById('ol3').style;
-            var ol4 = document.getElementById('ol4').style;
             var suwak = document.getElementById('suwak').style;
-            let user = getCookie("urzadzenie");
             let tryb = getCookie("trybekran");
-            if (user == "telefon") {
-                ol1.transform = "translateX(-135px)";
-                ol2.transform = "translateX(-135px)";
-                ol3.transform = "translateX(-90px)";
-                ol4.transform = "translateX(-17px)";
-            } else if (user == "komputer") {
-                ol1.transform = "translateX(-115px)";
-                ol2.transform = "translateX(-110px)";
-                ol3.transform = "translateX(-80px)";
-                ol4.transform = "translateX(-20px)";
-            } else if (user == "inne") {
-                ol1.transform = "translateX(-115px)";
-                ol2.transform = "translateX(-110px)";
-                ol3.transform = "translateX(-80px)";
-                ol4.transform = "translateX(-20px)";
-            }
-            else {
-                user = prompt("Jakiego urządzenia używasz ? (telefon, komputer, inne):", "");
-                while ((user != "telefon") && (user != "komputer") && (user != "inne"))
-                {
-                    user = prompt("Podaj prawidłowe dane: (telefon, komputer, inne):", "");
-                }
-                setCookie("urzadzenie", user, 30);
-                location.reload();
-            }
             if (tryb == 1)
             {
                 on(1);
@@ -688,6 +658,30 @@ Mamy nadzieję, że zobaczymy się na trasie.<br /><br />
         var newsoverflow = document.getElementsByClassName('newsoverflow');
         var divnewsczytajwiecej = document.getElementsByClassName('divnewsczytajwiecej');
         var newszawartosc = document.getElementsByClassName('newszawartosc');
+        
+        var ol1 = document.getElementById('ol1').style;
+        var ol2 = document.getElementById('ol2').style;
+        var ol3 = document.getElementById('ol3').style;
+        var ol4 = document.getElementById('ol4').style;    
+        if (screen.width <= 450) {
+            ol1.transform = "translateX(-135px)";
+            ol2.transform = "translateX(-135px)";
+            ol3.transform = "translateX(-90px)";
+            ol4.transform = "translateX(-17px)";
+         } else if (screen.width > 450 && screen.width <= 800) {
+            ol1.transform = "translateX(-115px)";
+            ol2.transform = "translateX(-110px)";
+            ol3.transform = "translateX(-80px)";
+            ol4.transform = "translateX(-20px)";
+         } else if (screen.width > 800) {
+            ol1.transform = "translateX(-115px)";
+            ol2.transform = "translateX(-110px)";
+            ol3.transform = "translateX(-80px)";
+            ol4.transform = "translateX(-20px)";
+         } else {
+         }
+          
+
         if (news.length > 5) {
             for (var t = 6; t <= news.length; t++)
                 news[t - 1].style.display = "none";
