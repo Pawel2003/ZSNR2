@@ -465,24 +465,9 @@ button:hover
 }
 .photos img
 {
-    float: left;
-    width: calc(33.33% - 10px);
+    width: 100%;
     height: auto;
-    margin: 5px;
-}
-.imgnapolowe
-{
-    float: left;
-    height: auto;
-    width: calc(50% - 10px) !important;
-    margin: 5px;
-}
-.imgnacale
-{
-    float: left;
-    height: auto;
-    width: calc(100% - 10px) !important;
-    margin: 5px;
+    margin: 5px 0;
 }
 #chevron-up
 {
