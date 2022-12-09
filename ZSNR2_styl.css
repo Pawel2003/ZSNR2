@@ -381,6 +381,7 @@ button:hover
     width: 100%;
     height: 190px;
     background: linear-gradient(180deg, transparent, #1b1b1b);
+    transition: overflow 1s ease;
 }
 .newsheader
 {
